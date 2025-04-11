@@ -1,43 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Świątynia Światła</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000018"/>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="centered">
-    <div class="sigil"></div>
-    <div class="title" id="title">Świątynia Światła</div>
-    <div class="subtitle" id="subtitle">
-      Miejsce, w którym rezonują wszystkie kody.
-    </div>
-  </div>
-  <div class="mapa-swiadomosci"></div>
+  <div id="portal">Wejście aktywne: 22:22</div>
 
-  <div id="intencje" class="centered" style="padding: 50px 20px;">
-    <h2 id="intro-label" style="color: gold; font-size: 2em; margin-bottom: 30px;">Wybierz Intencję</h2>
-    <div id="karty" class="karty-container"></div>
-    <div id="modlitwa" class="modlitwa-output"></div>
+  <div id="interfejs" class="interface">
+    <button onclick="openSeal()">🜂 Pieczęć</button>
+    <button onclick="playMantra()">🔊 Mantra Lux Vera</button>
+    <button onclick="enterMeditation()">🧘 Wejdź do Medytacji</button>
+    <button onclick="openPDF()">📜 Otwórz Pieczęć PDF</button>
   </div>
 
-  <audio id="ambient" src="ambient_432hz.mp3" autoplay loop></audio>
-  <button onclick="toggleAudio()" style="position:fixed; bottom:20px; right:20px; background:gold; color:#000; padding:10px; border:none; border-radius:10px; cursor:pointer; z-index:1000;">Wycisz / Wznów</button>
-
-  <script>
-    function toggleAudio() {
-      const audio = document.getElementById('ambient');
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-  </script>
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
